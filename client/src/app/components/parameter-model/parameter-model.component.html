@@ -1,0 +1,197 @@
+<div class="customMaterial">
+    <div *ngFor="let config of _config">
+        <ng-template [ngTemplateOutlet]="getTemplate(config.type)" [ngTemplateOutletContext]="{
+                $implicit: config,
+                config: config,
+                property: config.property,
+                data: config.data
+                }"></ng-template>
+    </div>
+</div>
+
+
+<ng-template #Int32 let-property="property" let-config="config">
+    <div class="label">
+        {{config.name}}
+    </div>
+    <div class="prop">
+        <mat-form-field class="w100">
+            <input [(ngModel)]="_model[property]" [disabled]="readonly" matInput type="number" min="0" step="1"
+                (keypress)="numberOnly($event)" (change)="emitModel()" />
+        </mat-form-field>
+    </div>
+</ng-template>
+<ng-template #Double let-property="property" let-config="config">
+    <div class="label">
+        {{config.name}}
+    </div>
+    <div class="prop">
+        <mat-form-field class="w100">
+            <input [(ngModel)]="_model[property]" [disabled]="readonly" matInput type="number" (change)="emitModel()" />
+        </mat-form-field>
+    </div>
+</ng-template>
+<ng-template #MultiSelect let-property="property" let-data="data" let-config="config">
+    <div class="label">
+        {{config.name}}
+    </div>
+    <div class="prop">
+        <mat-form-field class="w100">
+            <mat-select [(ngModel)]="_model[property]" multiple (selectionChange)="emitModel()" [disabled]="readonly">
+                <mat-option *ngFor="let item of data" [value]="item.key">{{item.value}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</ng-template>
+<ng-template #Vector let-property="property" let-config="config">
+    <div class="label">
+        {{config.name}}
+    </div>
+    <div class="prop">
+        <div>
+            <div class="vectorContainerItem">
+                <div>
+                    <div class="subLabel">X</div>
+                </div>
+                <div>
+                    <div class="subLabel">Y</div>
+                </div>
+                <div>
+                    <div class="subLabel">Z</div>
+                </div>
+            </div>
+            <div class="vectorContainerItem">
+                <div>
+                    <mat-form-field class="w100">
+                        <input [(ngModel)]="_model[property].x" (change)="emitModel()" matInput type="number"
+                            [disabled]="readonly" />
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="w100">
+                        <input [(ngModel)]="_model[property].y" (change)="emitModel()" matInput type="number"
+                            [disabled]="readonly" />
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="w100">
+                        <input [(ngModel)]="_model[property].z" (change)="emitModel()" matInput type="number"
+                            [disabled]="readonly" />
+                    </mat-form-field>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #Range let-property="property" let-config="config">
+    <div class="label">
+        {{config.name}}
+    </div>
+    <div class="prop">
+        <div>
+            <div class="rangeContainerItem">
+                <div>
+                    <div class="subLabel">From</div>
+                </div>
+                <div>
+                    <div class="subLabel">To</div>
+                </div>
+            </div>
+            <div class="rangeContainerItem">
+                <div>
+                    <mat-form-field class="w100">
+                        <input [(ngModel)]="_model[property].from" (change)="emitModel()" [disabled]="readonly" matInput
+                            type="number" min="0" step="1" (keypress)="numberOnly($event)" />
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field class="w100">
+                        <input [(ngModel)]="_model[property].to" (change)="emitModel()" [disabled]="readonly" matInput
+                            type="number" min="0" step="1" (keypress)="numberOnly($event)" />
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #Group let-property="property" let-config="config">
+    <div class="label">
+        {{config.name}}
+        <div class="groupHeader">
+            <mat-icon aria-hidden="false" *ngIf="!config.collapsed" (click)="config.collapsed = true">unfold_less
+            </mat-icon>
+            <mat-icon aria-hidden="false" *ngIf="config.collapsed" (click)="config.collapsed = false">unfold_more
+            </mat-icon>
+        </div>
+    </div>
+    <div class="prop">
+        <div [hidden]="config.collapsed">
+            <div class="groupContainer">
+                <div class="groupBody">
+                    <app-parameter-model [readonly]="readonly" *ngIf="config.subData"
+                        [config]="config.subData.properties" [(model)]="_model[property]" (modelChange)="emitModel()">
+                    </app-parameter-model>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<ng-template #Boolean let-property="property" let-config="config">
+    <div class="checkboxPosition">
+        <div class="label">
+            {{config.name}}
+        </div>
+        <div class="prop">
+            <mat-checkbox [(ngModel)]="_model[property]" [disabled]="readonly" (change)="emitModel()"></mat-checkbox>
+        </div>
+    </div>
+</ng-template>
+<ng-template #ObjectList let-property="property" let-config="config">
+    <div class="label">
+        {{config.name}}
+        <div class="groupHeader">
+            <mat-icon aria-hidden="false" *ngIf="!config.collapsed" (click)="config.collapsed = true">unfold_less
+            </mat-icon>
+            <mat-icon aria-hidden="false" *ngIf="config.collapsed" (click)="config.collapsed = false">unfold_more
+            </mat-icon>
+        </div>
+    </div>
+    <div class="prop">
+        <div [hidden]="config.collapsed">
+            <div>
+                <div class="groupBody" [hidden]="config.collapsed">
+                    <div *ngFor="let listItem of _model[property]; let i = index">
+                        <div class="groupContainer">
+                            <div class="groupHeaderFold">
+                                <mat-icon aria-hidden="false" *ngIf="!_model[property][i].collapsed"
+                                    (click)="_model[property][i].collapsed = true">unfold_less</mat-icon>
+                                <mat-icon aria-hidden="false" *ngIf="_model[property][i].collapsed"
+                                    (click)="_model[property][i].collapsed = false">unfold_more</mat-icon>
+                            </div>
+                            <div class="groupBody itemBody" [hidden]="_model[property][i].collapsed">
+                                <app-parameter-model [readonly]="readonly" *ngIf="config.subData"
+                                    [config]="config.subData.properties" [(model)]="_model[property][i]"
+                                    (modelChange)="emitModel()">
+                                </app-parameter-model>
+                            </div>
+                            <div class="groupFooter">
+                                <mat-icon aria-hidden="false" (click)="duplicate(config, i)" *ngIf="!readonly">
+                                    flip_to_front</mat-icon>
+                                <mat-icon aria-hidden="false" (click)="removeIndex(config, i)" *ngIf="!readonly">delete
+                                </mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="groupContainer">
+                        <div class="groupFooter">
+                            <mat-icon aria-hidden="false" (click)="addNew(config)" *ngIf="!readonly">add</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

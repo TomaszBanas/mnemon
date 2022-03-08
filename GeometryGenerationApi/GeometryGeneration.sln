@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{01533ABC-A172-4F18-9ACA-CE8754790711}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParametersManager", "Common\ParametersManager\ParametersManager.csproj", "{A821B291-EE42-4821-9AC2-030F5984B77A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1FC579CD-D549-43BD-8F21-363A43989975}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsoleApp", "Test\TestConsoleApp\TestConsoleApp.csproj", "{F4B385B5-85F1-4102-9903-0EB18E5F3B45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.Api", "GeometryGeneration.Api\GeometryGeneration.Api.csproj", "{8099354E-739E-430A-AC89-C6BFD4FA3002}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.TreeGeneration", "GeometryGeneration.TreeGeneration\GeometryGeneration.TreeGeneration.csproj", "{516DAAFF-31E4-4A0B-B50C-F1F26D059478}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.Model", "Common\GeometryGeneration.Model\GeometryGeneration.Model.csproj", "{66A4192F-BA3A-4DC1-90B0-1C3819337C94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generators", "Generators", "{6F822B13-DB07-4659-97EB-CDF9E66E781E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.GeneratorBase", "Generators\GeometryGeneration.GeneratorBase\GeometryGeneration.GeneratorBase.csproj", "{58DC1148-317F-4174-8F28-185388496143}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.MathCalculations", "Common\GeometryGeneration.Math\GeometryGeneration.MathCalculations.csproj", "{530FEA6D-51EB-4FD1-85B9-EBA00DCB0908}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.BezierCurveGeneration", "GeometryGeneration.BezierCurveGeneration\GeometryGeneration.BezierCurveGeneration.csproj", "{D37061DD-714F-42E9-AB3F-8B2B2CE0A5A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometryGeneration.Interfaces", "GeometryGeneration.Interfaces\GeometryGeneration.Interfaces.csproj", "{8461A64E-8BF8-4FC6-853A-EB30FA0EE9E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryGeneration.MEPElementGeneration", "Generators\GeometryGeneration.MEPElementGeneration\GeometryGeneration.MEPElementGeneration.csproj", "{E84AD6FE-7AE4-49B3-A546-319F823CC76D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A821B291-EE42-4821-9AC2-030F5984B77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A821B291-EE42-4821-9AC2-030F5984B77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A821B291-EE42-4821-9AC2-030F5984B77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A821B291-EE42-4821-9AC2-030F5984B77A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B385B5-85F1-4102-9903-0EB18E5F3B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B385B5-85F1-4102-9903-0EB18E5F3B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B385B5-85F1-4102-9903-0EB18E5F3B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B385B5-85F1-4102-9903-0EB18E5F3B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8099354E-739E-430A-AC89-C6BFD4FA3002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8099354E-739E-430A-AC89-C6BFD4FA3002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8099354E-739E-430A-AC89-C6BFD4FA3002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8099354E-739E-430A-AC89-C6BFD4FA3002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516DAAFF-31E4-4A0B-B50C-F1F26D059478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516DAAFF-31E4-4A0B-B50C-F1F26D059478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516DAAFF-31E4-4A0B-B50C-F1F26D059478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516DAAFF-31E4-4A0B-B50C-F1F26D059478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A4192F-BA3A-4DC1-90B0-1C3819337C94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A4192F-BA3A-4DC1-90B0-1C3819337C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A4192F-BA3A-4DC1-90B0-1C3819337C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A4192F-BA3A-4DC1-90B0-1C3819337C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58DC1148-317F-4174-8F28-185388496143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58DC1148-317F-4174-8F28-185388496143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58DC1148-317F-4174-8F28-185388496143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58DC1148-317F-4174-8F28-185388496143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{530FEA6D-51EB-4FD1-85B9-EBA00DCB0908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{530FEA6D-51EB-4FD1-85B9-EBA00DCB0908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{530FEA6D-51EB-4FD1-85B9-EBA00DCB0908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{530FEA6D-51EB-4FD1-85B9-EBA00DCB0908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D37061DD-714F-42E9-AB3F-8B2B2CE0A5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D37061DD-714F-42E9-AB3F-8B2B2CE0A5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D37061DD-714F-42E9-AB3F-8B2B2CE0A5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D37061DD-714F-42E9-AB3F-8B2B2CE0A5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8461A64E-8BF8-4FC6-853A-EB30FA0EE9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8461A64E-8BF8-4FC6-853A-EB30FA0EE9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8461A64E-8BF8-4FC6-853A-EB30FA0EE9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8461A64E-8BF8-4FC6-853A-EB30FA0EE9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84AD6FE-7AE4-49B3-A546-319F823CC76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84AD6FE-7AE4-49B3-A546-319F823CC76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84AD6FE-7AE4-49B3-A546-319F823CC76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84AD6FE-7AE4-49B3-A546-319F823CC76D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A821B291-EE42-4821-9AC2-030F5984B77A} = {01533ABC-A172-4F18-9ACA-CE8754790711}
+		{F4B385B5-85F1-4102-9903-0EB18E5F3B45} = {1FC579CD-D549-43BD-8F21-363A43989975}
+		{66A4192F-BA3A-4DC1-90B0-1C3819337C94} = {01533ABC-A172-4F18-9ACA-CE8754790711}
+		{58DC1148-317F-4174-8F28-185388496143} = {6F822B13-DB07-4659-97EB-CDF9E66E781E}
+		{530FEA6D-51EB-4FD1-85B9-EBA00DCB0908} = {01533ABC-A172-4F18-9ACA-CE8754790711}
+		{D37061DD-714F-42E9-AB3F-8B2B2CE0A5A9} = {6F822B13-DB07-4659-97EB-CDF9E66E781E}
+		{8461A64E-8BF8-4FC6-853A-EB30FA0EE9E9} = {01533ABC-A172-4F18-9ACA-CE8754790711}
+		{E84AD6FE-7AE4-49B3-A546-319F823CC76D} = {6F822B13-DB07-4659-97EB-CDF9E66E781E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {073F7AB6-B8D0-4E62-9FDC-6C10095457C2}
+	EndGlobalSection
+EndGlobal

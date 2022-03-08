@@ -1,0 +1,9 @@
+<div class="Container customMaterial" *ngIf="_itemConfig">
+    <div class="item itemBody">
+        <app-parameter-model [config]="_itemConfig.properties" [readonly]="readonly" [(model)]="selectedItemConfig" (modelChange)="selectedItemChanged()"></app-parameter-model>
+    </div>
+    <div class="line"></div>
+    <div class="item itemFooter">
+        <button mat-flat-button color="accent" class="w100" (click)="confirmProperties()">Confirm</button>
+    </div>
+</div>

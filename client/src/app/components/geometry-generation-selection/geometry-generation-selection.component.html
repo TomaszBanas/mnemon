@@ -1,0 +1,12 @@
+<div class="Container customMaterial">
+    <div class="header">
+        <mat-form-field class="w100" *ngIf="_config">
+            <mat-select [(ngModel)]="selectedConfig" (selectionChange)="onConfigChanged()">
+                <mat-option *ngFor="let item of _config.types" [value]="item.key">{{item.value}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="body">
+        <router-outlet></router-outlet>
+    </div>
+</div>
