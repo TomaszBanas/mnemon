@@ -1,4 +1,4 @@
-import { Box3, BoxGeometry, Color, ColorRepresentation, CylinderGeometry, EdgesGeometry, Group, LineBasicMaterial, LineSegments, Matrix4, Mesh, MeshBasicMaterial, SphereGeometry, Vector3 } from "three";
+import { Box3, BoxGeometry, BufferAttribute, BufferGeometry, Color, ColorRepresentation, CylinderGeometry, DoubleSide, EdgesGeometry, Group, LineBasicMaterial, LineSegments, Matrix4, Mesh, MeshBasicMaterial, SphereGeometry, Vector3 } from "three";
 import { ThreeJsObject } from "../elements/three-js-object";
 import { MatrixUtils } from "./matrix-utils";
 
@@ -46,6 +46,37 @@ export class GeometryGenerationUtils
         group.applyMatrix4(lineMatrix);
         return group;
     }
+
+    public static generatePlane(origin: Vector3, direction: Vector3, borderPoints: Vector3[] = [], color: ColorRepresentation = 0x00ff00, opacity: number = 1): Group {
+        const colorModel = new Color(color);
+        const material = new MeshBasicMaterial({ color: colorModel, opacity: opacity, side: DoubleSide, transparent: true });
+        const group = new Group();
+
+        const geometry = new BufferGeometry();
+        const vertices: any[] = [];
+        const first = borderPoints[0];
+        for (let i = 1; i < borderPoints.length-1; i++) {
+            vertices.push(first.x);
+            vertices.push(first.y);
+            vertices.push(first.z);
+
+            vertices.push(borderPoints[i].x);
+            vertices.push(borderPoints[i].y);
+            vertices.push(borderPoints[i].z);
+
+            vertices.push(borderPoints[i+1].x);
+            vertices.push(borderPoints[i+1].y);
+            vertices.push(borderPoints[i+1].z);
+        }
+        geometry.setAttribute( 'position', new BufferAttribute( new Float32Array(vertices), 3 ) );
+        geometry.computeVertexNormals();
+
+        const plane = new Mesh( geometry, material );
+
+        group.add(plane)
+        return group;
+    }
+
     public static generateArrow(headLength: number, headThickness: number, lineLength: number, lineThickness: number, transformation: Matrix4, color: ColorRepresentation): Group {
         const arrow = new Group();
         // Head

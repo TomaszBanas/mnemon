@@ -17,8 +17,8 @@ namespace GeometryGeneration.MEPElementGeneration.Models
         [ParameterProperty("MEP Objects")]
         public List<MEPElementParameters> MepObjects { get; set; }
 
-        [GroupParameterProperty("Test")]
-        public MEPElementParameters Test { get; set; }
+        //[GroupParameterProperty("Test")]
+        //public MEPElementParameters Test { get; set; }
 
         [ParameterProperty("Debug")]
         public bool Debug { get; set; }

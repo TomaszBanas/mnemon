@@ -12,11 +12,21 @@ export class ParameterSelectorComponent implements OnInit {
   public selectedItemConfig: any = {};
   public _itemConfig: any;
   public _selectedConfig!: string;
+  public _model: string | undefined;
 
 
   @Input() readonly!: boolean;
   @Input() set selectedConfig(v: string) {
     this._selectedConfig = v;
+    this.loadConfig();
+  }
+  @Input() set model(v: string) {
+    this.selectedItemConfig = v;
+    if(!this.selectedItemConfig)
+    {
+      const storageData = localStorage.getItem(this._selectedConfig);
+      this.selectedItemConfig = storageData ? JSON.parse(storageData) : null;
+    }
     this.loadConfig();
   }
 
@@ -34,19 +44,18 @@ export class ParameterSelectorComponent implements OnInit {
     }
     this.parametersService.getItemConfig(this._selectedConfig).then(c => {
       this._itemConfig = c;
-      const storageData = localStorage.getItem(this._selectedConfig);
-      this.selectedItemConfig = storageData ? JSON.parse(storageData) : null;
-      setTimeout(() => {this.confirmProperties()}, 0); // to create model on start
+      this.confirmProperties();
     })
   }
 
   public selectedItemChanged() {
-    const jsonData = JSON.stringify(this.selectedItemConfig);
-    localStorage.setItem(this._selectedConfig, jsonData);
+    localStorage.setItem(this._selectedConfig, JSON.stringify(this.selectedItemConfig));
     this.confirmProperties();
   }
 
   public confirmProperties() {
+    if(!this.selectedItemConfig)
+      return;
     this.onConfirm.emit(
       {
         config: this._itemConfig,

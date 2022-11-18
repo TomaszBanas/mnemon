@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\GeometryGeneration.Interfaces\GeometryGeneration.Interfaces.csproj" />
     <ProjectReference Include="..\..\Common\GeometryGeneration.Math\GeometryGeneration.MathCalculations.csproj" />
     <ProjectReference Include="..\..\Common\GeometryGeneration.Model\GeometryGeneration.Model.csproj" />
     <ProjectReference Include="..\..\Common\ParametersManager\ParametersManager.csproj" />

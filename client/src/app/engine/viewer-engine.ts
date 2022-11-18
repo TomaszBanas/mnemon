@@ -68,7 +68,9 @@ export class ViewerEngine implements IEngine {
             scene.render(this.renderer, this.camera);
         }
     }
-
+    public picture(): string {
+        return this.renderer.domElement.toDataURL();
+    }
 
     private sortScenes = () => this.scenes.sort((a, b) => a.priority - b.priority);
 

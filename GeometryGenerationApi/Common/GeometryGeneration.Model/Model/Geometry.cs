@@ -16,6 +16,7 @@ namespace GeometryGeneration.Model
 
         public Geometry()
         {
+            Key = Guid.NewGuid().ToString();
             Normals = new GeometryArray(3);
             Vertices = new GeometryArray(3);
             Indexes = new GeometryArray(1);

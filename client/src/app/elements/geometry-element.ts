@@ -17,7 +17,7 @@ export class GeometryElement implements IElement
         public vertices: number[],
         public indexes: number[],
         public normals: number[],
-        public colors: number[]
+        public colors: number[],
     )
     {
         const geometry = new BufferGeometry();

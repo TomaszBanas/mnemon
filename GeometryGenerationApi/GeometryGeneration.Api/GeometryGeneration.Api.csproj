@@ -13,13 +13,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Common\GeometryGeneration.Model\GeometryGeneration.Model.csproj" />
     <ProjectReference Include="..\Common\ParametersManager\ParametersManager.csproj" />
+    <ProjectReference Include="..\Generators\GeometryGeneration.BezierCurveGeneration\GeometryGeneration.BezierCurveGeneration.csproj" />
     <ProjectReference Include="..\Generators\GeometryGeneration.MEPElementGeneration\GeometryGeneration.MEPElementGeneration.csproj" />
-    <ProjectReference Include="..\GeometryGeneration.BezierCurveGeneration\GeometryGeneration.BezierCurveGeneration.csproj" />
-    <ProjectReference Include="..\GeometryGeneration.TreeGeneration\GeometryGeneration.TreeGeneration.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Generators\GeometryGeneration.Test\GeometryGeneration.Test.csproj" />
+    <ProjectReference Include="..\Generators\GeometryGeneration.TreeGeneration\GeometryGeneration.TreeGeneration.csproj" />
+    <ProjectReference Include="..\GeometryGeneration.Samples\GeometryGeneration.Samples.csproj" />
   </ItemGroup>
 
 </Project>

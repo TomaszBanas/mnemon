@@ -2,9 +2,11 @@ import { Component, NgZone, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CustomOrthographicCamera } from 'src/app/cameras/orthographic-camera';
 import { Geometry } from 'src/app/implementations/shared/models/geometry';
+import { Grid } from 'src/app/implementations/shared/models/grid';
 import { Line } from 'src/app/implementations/shared/models/line';
+import { Vector } from 'src/app/implementations/shared/models/vector';
 import { TestEngine } from 'src/app/implementations/test1/engine/test-engine';
-import { MainModelMock } from 'src/app/implementations/test1/models/main-model.mock';
+import { MainModel } from 'src/app/implementations/test1/models/main-model';
 import { ICamera } from 'src/app/interfaces/i-camera';
 import { IScene } from 'src/app/interfaces/i-scene';
 import { ParametersService } from 'src/app/services/parameters.service';
@@ -21,6 +23,7 @@ export class GeometryGenerationComponent {
   public mainScene?: IScene;
   public camera?: ICamera;
   public selectedConfig?: string | null;
+  public sampleId?: string | null;
   public readonly!: boolean;
   
   public interval!: any;
@@ -32,7 +35,7 @@ export class GeometryGenerationComponent {
     private route: ActivatedRoute
     ) {
     const renderer = this.renderersProvider.get();
-    this.engine = new TestEngine(MainModelMock.instance.mock ,renderer);
+    this.engine = new TestEngine(renderer);
     this.camera = new CustomOrthographicCamera();
     this.engine.setCamera(this.camera);
 
@@ -41,9 +44,14 @@ export class GeometryGenerationComponent {
   }
 
   ngOnInit() {
+    this.route.params.subscribe(paramMap => {
+      this.zone.run(() => {
+        this.selectedConfig = paramMap['id'];
+      });
+    });
     this.route.queryParamMap.subscribe(paramMap => {
       this.zone.run(() => {
-        this.selectedConfig = paramMap.get('id');
+        this.sampleId = paramMap.get('sampleId');
       });
     });
     this.route.data.subscribe((v: any) => {
@@ -52,19 +60,18 @@ export class GeometryGenerationComponent {
   }
   
   public loadData(data: any): void {
-    this.engine?.geometriesData.clear();
-    this.engine?.linesData.clear();
+    this.engine?.clearModels();
     this.parametersService.generate(data.config, data.model).then((response: any) => {
       if(!response)
         return;
-      for (const c of response.components) {
-        this.engine?.geometriesData.add(c.geometry as Geometry);
-        
-        for (const line of c.lines) {
-            this.engine?.linesData.add(line as Line);
-        }
-      }
+      this.engine?.updateModels(response.components.map((x: any) => x as MainModel));
     });
+  }
+  public clear(): void {
+    this.engine?.clearModels();
+  }
+  public picture(): void {
+    this.engine?.picture();
   }
 
 }

@@ -3,6 +3,7 @@ using GeometryGeneration.Interfaces;
 using GeometryGeneration.Interfaces.Routing;
 using GeometryGeneration.MEPElementGeneration.Controllers;
 using GeometryGeneration.TreeGeneration.Controllers;
+using GeometryGeneration.Test.Controllers;
 using ParametersManager.Controllers;
 using ParametersManager.Managers;
 using ParametersManager.Models;
@@ -41,16 +42,32 @@ namespace GeometryGeneration.Api
         private void ConfigureEndPoints()
         {
             this.ConfigurePropertiesEndpoints();
+
+
             this.ConfigureBazierCurveEndpoints();
-            this.ConfigureTreeEndpoints();
             this.ConfigureMEPEndpoints();
+
+            #if DEBUG
+
+            this.ConfigureTreeEndpoints();
+            this.ConfigureTestEndpoints();
+
+            #endif
+
         }
         
         private void ConfigureModels()
         {
             this.ConfigureBazierCurveModels();
-            this.ConfigureTreeModels();
             this.ConfigureMEPModels();
+
+
+            #if DEBUG
+
+            this.ConfigureTreeModels();
+            this.ConfigureTestModels();
+
+            #endif
         }
 
     }

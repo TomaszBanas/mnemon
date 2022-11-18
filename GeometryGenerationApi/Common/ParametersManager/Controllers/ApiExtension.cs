@@ -1,6 +1,4 @@
 ﻿using GeometryGeneration.Interfaces.Routing;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Routing;
 using ParametersManager.Managers;
 using ParametersManager.Models;
 using System;

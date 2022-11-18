@@ -25,7 +25,7 @@ export class RenderersProviderService implements IRenderersProvider {
     const renderer = this.renderers.shift();
     if(!renderer) throw "Renderer not specified";
     renderer.localClippingEnabled = true;
-    renderer.setClearColor(0x404040, 1);
+    renderer.setClearColor(0x252627, 1);
     renderer.clear();
     renderer.autoClear = false;
     this.used.push(renderer);

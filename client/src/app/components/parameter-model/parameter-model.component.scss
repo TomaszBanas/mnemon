@@ -40,10 +40,10 @@
         padding: 6px 2px 2px 2px;
     }
     .mat-form-field:hover {
-        border: 1px solid #ff4081;
+        border: 1px solid #03989e;
     }
     .mat-focused {
-        border: 1px solid #ff4081;
+        border: 1px solid #03989e;
     }
     .mat-form-field-infix {
         padding: 0;
@@ -70,7 +70,7 @@ mat-icon {
 }
 mat-icon:hover {
     box-sizing: border-box;
-    color: #ff4081;
+    color: #03989e;
 }
 
 .checkboxPosition {
@@ -99,7 +99,7 @@ mat-icon:hover {
         padding-right: 10px;
     }
     .groupHeaderFold {
-        background-color: lightgrey;
+        background-color: #252627;
         position: absolute;
         left: -13px;
         top: 3px;
@@ -107,7 +107,7 @@ mat-icon:hover {
     }
     .groupFooter {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         padding-top: 10px;
     }
 }

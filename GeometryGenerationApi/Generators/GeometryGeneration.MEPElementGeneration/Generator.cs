@@ -33,10 +33,13 @@ namespace GeometryGeneration.MEPElementGeneration
 
             var component = new GeometryModelComponent();
             component.Type = "Curve";
+            var geometry = new Geometry();
+            component.Geometries.Add(geometry);
+
 
             var parts = 20;
 
-            var state = new ConnectionGenerationState(component.Geometry);
+            var state = new ConnectionGenerationState(geometry);
 
             var curve = new BezierCurve3(
                 new List<Vector3D>

@@ -19,5 +19,10 @@ namespace GeometryGeneration.MathCalculations.Converters
         {
             return new Vector(v.X, v.Y, v.Z);
         }
+        
+        public static int ToHex(this Vector v)
+        {
+            return Convert.ToInt32((v.X * 256 * 256 * 255) + (v.Y * 256 * 255) + (v.Z * 255));
+        }
     }
 }

@@ -1,7 +1,6 @@
 using GeometryGeneration.Api;
-using GeometryGeneration.TreeGeneration;
-using GeometryGeneration.TreeGeneration.Interfaces;
-using ParametersManager.Controllers;
+using GeometryGeneration.Samples.Models;
+using GeometryGeneration.Samples.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ITreeGenerator, TreeGenerator>();
+
+builder.Services.Configure<SamplesConfig>(builder.Configuration.GetSection("SamplesConfig"));
+
+
+builder.Services.AddScoped<SamplesService>();
 
 var app = builder.Build();
 

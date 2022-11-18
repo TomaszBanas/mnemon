@@ -18,6 +18,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { GeometryGenerationComponent } from './components/geometry-generation/geometry-generation.component';
 import { GeometryGenerationSelectionComponent } from './components/geometry-generation-selection/geometry-generation-selection.component';
+import { SamplesContainerComponent } from './components/samples-container/samples-container.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { GeometryGenerationSelectionComponent } from './components/geometry-gene
     ParameterSelectorComponent,
     ParameterModelComponent,
     GeometryGenerationComponent,
-    GeometryGenerationSelectionComponent
+    GeometryGenerationSelectionComponent,
+    SamplesContainerComponent
   ],
   imports: [
     BrowserModule,

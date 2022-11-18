@@ -22,20 +22,16 @@ export class GeometryGenerationSelectionComponent implements OnInit {
     this.parametersService.getConfig().then(c => {
       this._config = c;
     });
-    this.route.queryParamMap.subscribe(paramMap => {
+    this.route.params.subscribe(paramMap => {
       this.zone.run(() => {
-        this.selectedConfig = paramMap.get('id');
+        this.selectedConfig = paramMap['id'];
       });
     });
   }
 
   public onConfigChanged() {
-    this.router.navigate(['edit'], {
-      relativeTo:this.route,
-      queryParams: {
-        id: this.selectedConfig
-      }
-    });
+    var path = 'geometry/' + this.selectedConfig + '/edit';
+    this.router.navigate([path], {});
   }
 
 }
