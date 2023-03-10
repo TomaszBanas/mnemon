@@ -1,0 +1,536 @@
+{
+  "MepObjects": [
+    {
+      "StartPoint": {
+        "x": -18,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": -18,
+        "y": 0,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": -2,
+        "y": 0,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 12,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 31,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 10,
+        "y": 0,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 31,
+        "y": 0,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 1,
+        "y": 10,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": -1,
+        "y": 1,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": -1,
+        "y": 10,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 11,
+        "y": 1,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 11,
+        "y": 10,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 9,
+        "y": 1,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 9,
+        "y": 10,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 2,
+        "y": 11,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 10,
+        "y": 11,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 0,
+        "y": 11,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 8,
+        "y": 11,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": -2,
+        "y": 0,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": -1,
+        "y": 1,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 12,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 11,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 10,
+        "y": 0,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 9,
+        "y": 1,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 10,
+        "y": 11,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 11,
+        "y": 10,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 8,
+        "y": 11,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 9,
+        "y": 10,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 2,
+        "y": 11,
+        "z": 0
+      },
+      "StartPointDirection": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": 1,
+        "y": 10,
+        "z": 0
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    },
+    {
+      "StartPoint": {
+        "x": 0,
+        "y": 11,
+        "z": 5
+      },
+      "StartPointDirection": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "StartPointRadius": 0.5,
+      "StartPointWallThickness": 0.05,
+      "EndPoint": {
+        "x": -1,
+        "y": 10,
+        "z": 5
+      },
+      "EndPointDirection": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "EndPointRadius": 0.5,
+      "EndPointWallThickness": 0.05,
+      "Hide": false,
+      "collapsed": true
+    }
+  ],
+  "Debug": false,
+  "Test": {
+    "StartPoint": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "StartPointDirection": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "StartPointRadius": 0,
+    "StartPointWallThickness": 0,
+    "EndPoint": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "EndPointDirection": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "EndPointRadius": 0,
+    "EndPointWallThickness": 0,
+    "Hide": false
+  }
+}

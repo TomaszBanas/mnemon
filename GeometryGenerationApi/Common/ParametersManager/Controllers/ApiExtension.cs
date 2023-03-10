@@ -13,9 +13,9 @@ namespace ParametersManager.Controllers
     {
         public static void ConfigurePropertiesEndpoints(this IEndpointManager app)
         {
-            var config = new Config();
+            var config = new ConfigItem();
             app.MapGet(config.ConfigUrl, () => ConfigCache.Instance.GetConfig());
-            app.MapGet(config.ItemConfigUrl, (string id) => ConfigCache.Instance.GetConfig(id));
+            //app.MapGet(config.ItemConfigUrl, (string id) => ConfigCache.Instance.GetConfig(id));
             app.MapGet(config.ItemValidationUrl, (string id) => false);
         }
     }

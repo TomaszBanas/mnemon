@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ParametersManager.Models
 {
-    internal class ConfigInternalData<T>
+    public class JSchemaDto
     {
-        public string Id { get; set; }
-        public Type Type { get; set; }
-        public List<T> Attributes { get; set; }
+        public Guid Id { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
     }
 }

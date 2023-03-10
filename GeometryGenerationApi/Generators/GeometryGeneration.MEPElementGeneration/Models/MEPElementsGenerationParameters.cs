@@ -10,48 +10,50 @@ using System.Threading.Tasks;
 namespace GeometryGeneration.MEPElementGeneration.Models
 {
 
-    [ParameterClass("e8628b6b-10de-424b-9429-5fa081fde600", "MEP Elements")]
+    //[ParameterClass("e8628b6b-10de-424b-9429-5fa081fde600", "MEP Elements")]
+    [JSchema(Title = "MEP Elements")]
     public class MEPElementsGenerationParameters
     {
 
-        [ParameterProperty("MEP Objects")]
+        [JSchema(Title = "MEP Objects")]
         public List<MEPElementParameters> MepObjects { get; set; }
 
         //[GroupParameterProperty("Test")]
         //public MEPElementParameters Test { get; set; }
 
-        [ParameterProperty("Debug")]
+        [JSchema(Title = "Debug")]
         public bool Debug { get; set; }
     }
 
-    [ParameterClass("8aafaf82-d6e9-4284-8458-b637515bc025", "MEPElementParameters")]
+    //[ParameterClass("8aafaf82-d6e9-4284-8458-b637515bc025", "MEPElementParameters")]
+    [JSchema(Title = "MEPElementParameters")]
     public class MEPElementParameters
     {
-        [ParameterProperty("Start point")]
+        [JSchema(Title = "Start point")]
         //[JsonPropertyName("1")]
         public Vector StartPoint { get; set; }
 
-        [ParameterProperty("Start point direction")]
+        [JSchema(Title = "Start point direction")]
         public Vector StartPointDirection { get; set; }
 
-        [ParameterProperty("Start point radius")]
+        [JSchema(Title = "Start point radius")]
         public double StartPointRadius { get; set; }
 
-        [ParameterProperty("Start point wall thickness")]
+        [JSchema(Title = "Start point wall thickness")]
         public double StartPointWallThickness { get; set; }
 
-        [ParameterProperty("End point")]
+        [JSchema(Title = "End point")]
         public Vector EndPoint { get; set; }
 
-        [ParameterProperty("End point direction")]
+        [JSchema(Title = "End point direction")]
         public Vector EndPointDirection { get; set; }
 
-        [ParameterProperty("End point radius")]
+        [JSchema(Title = "End point radius")]
         public double EndPointRadius { get; set; }
 
-        [ParameterProperty("End point wall thickness")]
+        [JSchema(Title = "End point wall thickness")]
         public double EndPointWallThickness { get; set; }
-        [ParameterProperty("Hide")]
+        [JSchema(Title = "Hide")]
         public bool Hide { get; set; }
 
     }

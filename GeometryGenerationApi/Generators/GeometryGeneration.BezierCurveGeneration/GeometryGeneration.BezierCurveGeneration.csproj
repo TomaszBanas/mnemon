@@ -1,7 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -12,9 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\GeometryGeneration.Interfaces\GeometryGeneration.Interfaces.csproj" />
     <ProjectReference Include="..\..\Common\GeometryGeneration.Math\GeometryGeneration.MathCalculations.csproj" />
+    <ProjectReference Include="..\..\Common\GeometryGeneration.Model\GeometryGeneration.Model.csproj" />
     <ProjectReference Include="..\..\Common\ParametersManager\ParametersManager.csproj" />
-    <ProjectReference Include="..\..\Generators\GeometryGeneration.BezierCurveGeneration\GeometryGeneration.BezierCurveGeneration.csproj" />
+    <ProjectReference Include="..\GeometryGeneration.GeneratorBase\GeometryGeneration.GeneratorBase.csproj" />
   </ItemGroup>
 
 </Project>

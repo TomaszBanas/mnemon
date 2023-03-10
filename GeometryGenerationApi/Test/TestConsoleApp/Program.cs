@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using GeometryGeneration.BezierCurveGeneration.Models;
 using GeometryGeneration.MathCalculations.Models;
 using Newtonsoft.Json;
 using ParametersManager.Managers;
+using ParametersManager.Models;
 
 //var a = new ConfigManager().GetConfig();
 //Console.WriteLine(JsonConvert.SerializeObject(a));
@@ -34,4 +36,20 @@ using ParametersManager.Managers;
 //var m = Matrix4.MakeRotationAxis(new Vector3D(0, 0, 1), -Math.PI/2);
 //var v = new Vector3D(1, 0, 0);
 //Console.Write(v.ApplyMatrix4(m).ToString());
+
+//var testJSchema = new JSchema
+//{
+//    Type = JSchemaType.Object,
+//    Title = "Test",
+//    Description = "Desc",
+//    Properties = null,
+//    Enum = new List<string> { "Test1" },
+//    ReadOnly = false,
+//    Regex = "test%"
+//};
+
+var test2JSchema = JSchemaManager.Instance.GetConfig<BezierCurveGenerationParameters>();
+
+Console.WriteLine(test2JSchema.ToString());
+
 Console.ReadKey();

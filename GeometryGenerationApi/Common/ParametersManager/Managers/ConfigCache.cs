@@ -10,36 +10,33 @@ namespace ParametersManager.Managers
     public class ConfigCache
     {
         public static ConfigCache Instance = new ConfigCache();
-
-        private Dictionary<string, ItemConfig> _data { get; set; }
-
-        private readonly ConfigManager _configManager  = new ConfigManager();
+        private Dictionary<Guid, JSchema> _data { get; set; }
 
         public ConfigCache()
         {
-            _data = new Dictionary<string, ItemConfig>();
+            _data = new Dictionary<Guid, JSchema>();
         }
 
-        public void Register(Type type, ItemConfigStaticData itemConfigStaticData)
+        public void Register(Guid id, JSchema item)
         {
-            var data = _configManager.GetConfig(type);
-            foreach (var item in data)
+            if(_data.ContainsKey(id))
             {
-                item.Data = itemConfigStaticData;
-                _data[item.Id] = item;
+                throw new ArgumentException($"Item with id: {id} already exist!");
             }
+            _data.Add(id, item);
         }
 
-        public Config GetConfig()
+        public List<JSchemaDto> GetConfigs()
         {
-            var types = _data.Select(item => new KeyValuePair<string, string>(item.Value.Id, item.Value.Name)).ToList();
-            return new Config()
+            return _data.Select(item => new JSchemaDto
             {
-                Types = types,
-            };
+                Id = item.Key,
+                Title = item.Value.Title,
+                Description = item.Value.Description
+            }).ToList();
         }
 
-        public ItemConfig GetConfig(string id)
+        public JSchema GetConfig(Guid id)
         {
             return _data[id];
         }

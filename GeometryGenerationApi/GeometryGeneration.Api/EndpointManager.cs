@@ -30,7 +30,7 @@ namespace GeometryGeneration.Api
         }
         public void Register(Type type, object data)
         {
-            ConfigCache.Instance.Register(type, (ItemConfigStaticData)data);
+            //ConfigCache.Instance.Register(type, (ItemConfigStaticData)data);
         }
 
         public void Configure()

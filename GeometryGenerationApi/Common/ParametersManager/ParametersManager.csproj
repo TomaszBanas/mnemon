@@ -11,9 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\GeometryGeneration.Interfaces\GeometryGeneration.Interfaces.csproj" />
     <ProjectReference Include="..\GeometryGeneration.Interfaces\GeometryGeneration.Interfaces.csproj" />
-    <ProjectReference Include="..\GeometryGeneration.Model\GeometryGeneration.Model.csproj" />
   </ItemGroup>
 
 </Project>
